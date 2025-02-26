@@ -1,0 +1,13 @@
+<div class="pensamento {{ thuoght.modelo }} ff-roboto-mono" [ngClass]="thoughtLenght()">
+  <img src="/assets/images/{{ thuoght.modelo }}.png" alt="Aspas coloridas" />
+  <p class="conteudo">{{thuoght.conteudo}}</p>
+  <p class="autoria"><b>{{thuoght.autoria}}</b></p>
+  <div class="acoes">
+    <button class="botao-editar">
+      <img src="/assets/images/icone-editar.png" alt="Ícone de editar">
+    </button>
+    <button class="botao-excluir">
+      <img src="/assets/images/icone-excluir.png" alt="Ícone de excluir">
+    </button>
+  </div>
+</div>
