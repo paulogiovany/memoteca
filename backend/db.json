@@ -19,16 +19,16 @@
       "template": "modelo1"
     },
     {
+      "id": 4,
       "content": "A verdadeira sabedoria está em reconhecer o quanto ainda há para aprender.",
       "authorship": "ChatGPT",
-      "template": "modelo1",
-      "id": 4
+      "template": "modelo1"
     },
     {
+      "id": 5,
       "content": "Growth begins where comfort ends.",
       "authorship": "ChatGPT",
-      "template": "modelo2",
-      "id": 5
+      "template": "modelo2"
     }
   ]
 }

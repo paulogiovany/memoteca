@@ -7,10 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ThoughtComponent implements OnInit {
 
-  @Input() thuoght = {
-    conteudo: "I'm learning Angular",
-    autoria: "Paulo.dev",
-    modelo: "modelo2"
+  @Input() thought = {
+    content: "I'm learning Angular",
+    authorship: "Paulo.dev",
+    template: "modelo2"
   }
 
   constructor() { }
@@ -19,6 +19,6 @@ export class ThoughtComponent implements OnInit {
   }
 
   thoughtLenght(): string {
-    return this.thuoght.conteudo.length >= 256 ? 'pensamento-g' : 'pensamento-p';
+    return this.thought.content.length >= 256 ? 'pensamento-g' : 'pensamento-p';
   }
 }
