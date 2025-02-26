@@ -1,0 +1,34 @@
+{
+  "thoughts": [
+    {
+      "id": 1,
+      "content": "There's a new Angular Developer",
+      "authorship": "Paulo.dev",
+      "template": "modelo1"
+    },
+    {
+      "id": 2,
+      "content": "Is Angular as bad as Cezar says?",
+      "authorship": "MonoAngular.dev",
+      "template": "modelo2"
+    },
+    {
+      "id": 3,
+      "content": "If we would depend of a React developer to survive, would we survive?",
+      "authorship": "AntiReactDevs.dev",
+      "template": "modelo1"
+    },
+    {
+      "content": "A verdadeira sabedoria está em reconhecer o quanto ainda há para aprender.",
+      "authorship": "ChatGPT",
+      "template": "modelo1",
+      "id": 4
+    },
+    {
+      "content": "Growth begins where comfort ends.",
+      "authorship": "ChatGPT",
+      "template": "modelo2",
+      "id": 5
+    }
+  ]
+}
