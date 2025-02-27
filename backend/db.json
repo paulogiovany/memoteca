@@ -29,6 +29,18 @@
       "content": "Growth begins where comfort ends.",
       "authorship": "ChatGPT",
       "template": "modelo2"
+    },
+    {
+      "content": "This thought has the unique purpose of test if the creation method is working properly.",
+      "authorship": "{{<h6>paulo.dev</h6>}}",
+      "template": "modelo3",
+      "id": 6
+    },
+    {
+      "content": "A single name: i18n",
+      "authorship": "i18enison",
+      "template": "modelo1",
+      "id": 7
     }
   ]
 }
