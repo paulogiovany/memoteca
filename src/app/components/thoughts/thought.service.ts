@@ -19,4 +19,13 @@ export class ThoughtService {
     return this.http.post<Thought>(this.API_THOUGHTS_URL, thought)
   }
 
+  delete(id: number): Observable<Thought> {
+    const deletionURL = `${this.API_THOUGHTS_URL}/${id}`
+    return this.http.delete<Thought>(deletionURL)
+  }
+
+  getById(id: number): Observable<Thought> {
+    const retrievalURL = `${this.API_THOUGHTS_URL}/${id}}`
+    return this.http.get<Thought>(retrievalURL)
+  }
 }
