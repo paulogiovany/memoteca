@@ -2,6 +2,7 @@ import { ThoughtService } from './../thought.service';
 import { Component, OnInit } from '@angular/core';
 import { Thought } from '../thought/thought';
 import { ActivatedRoute, Router } from '@angular/router';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-thought',
@@ -9,28 +10,29 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./edit-thought.component.css'],
 })
 export class EditThoughtComponent implements OnInit {
-  thought: Thought = {
-    id: 0,
-    content: '',
-    authorship: '',
-    template: 'modelo1',
-  };
+  form!: FormGroup;
 
   constructor(
     private thoughtService: ThoughtService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private formBuilder: FormBuilder
   ) {}
 
   ngOnInit(): void {
     const id = this.route.snapshot.paramMap.get('id');
     this.thoughtService.getById(parseInt(id!)).subscribe((thought) => {
-      this.thought = thought;
+      this.form = this.formBuilder.group({
+        id: [thought.id],
+        content: [thought.content],
+        authorship: [thought.authorship],
+        template: [thought.template],
+      });
     });
   }
 
   editThought() {
-    this.thoughtService.update(this.thought).subscribe(() => {
+    this.thoughtService.update(this.form.value).subscribe(() => {
       this.router.navigate(['/list-thoughts']);
     });
   }
