@@ -12,20 +12,25 @@ export class ThoughtService {
   constructor(private http: HttpClient) {}
 
   list(): Observable<Thought[]> {
-    return this.http.get<Thought[]>(this.API_THOUGHTS_URL)
+    return this.http.get<Thought[]>(this.API_THOUGHTS_URL);
   }
 
   create(thought: Thought): Observable<Thought> {
-    return this.http.post<Thought>(this.API_THOUGHTS_URL, thought)
+    return this.http.post<Thought>(this.API_THOUGHTS_URL, thought);
+  }
+
+  update(thought: Thought): Observable<Thought> {
+    const editionURL = `${this.API_THOUGHTS_URL}/${thought.id}`;
+    return this.http.put<Thought>(editionURL, thought);
   }
 
   delete(id: number): Observable<Thought> {
-    const deletionURL = `${this.API_THOUGHTS_URL}/${id}`
-    return this.http.delete<Thought>(deletionURL)
+    const deletionURL = `${this.API_THOUGHTS_URL}/${id}`;
+    return this.http.delete<Thought>(deletionURL);
   }
 
   getById(id: number): Observable<Thought> {
-    const retrievalURL = `${this.API_THOUGHTS_URL}/${id}}`
-    return this.http.get<Thought>(retrievalURL)
+    const retrievalURL = `${this.API_THOUGHTS_URL}/${id}`;
+    return this.http.get<Thought>(retrievalURL);
   }
 }
