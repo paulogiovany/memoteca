@@ -34,6 +34,7 @@ export class CreateThoughtComponent implements OnInit {
           Validators.minLength(3)]),
       ],
       template: ['modelo1'],
+      favorite: false
     });
   }
 

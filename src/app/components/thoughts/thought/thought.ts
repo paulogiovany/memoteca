@@ -5,4 +5,5 @@ export interface Thought {
   content: string;
   authorship: string;
   template: Template;
+  favorite: boolean;
 }

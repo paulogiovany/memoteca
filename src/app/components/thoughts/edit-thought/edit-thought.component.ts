@@ -40,6 +40,7 @@ export class EditThoughtComponent implements OnInit {
           ]),
         ],
         template: [thought.template],
+        favorite: [thought.favorite]
       });
     });
   }
