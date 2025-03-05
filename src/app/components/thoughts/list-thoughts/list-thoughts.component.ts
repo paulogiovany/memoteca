@@ -5,16 +5,27 @@ import { ThoughtService } from '../thought.service';
 @Component({
   selector: 'app-list-thoughts',
   templateUrl: './list-thoughts.component.html',
-  styleUrls: ['./list-thoughts.component.css']
+  styleUrls: ['./list-thoughts.component.css'],
 })
 export class ListThoughtsComponent implements OnInit {
-
   thoughtsList: Thought[] = [];
-  constructor(private thoughtSevice: ThoughtService) { }
+  currentPage: number = 1;
+  isThereMoreThoughts: boolean = true;
+
+  constructor(private thoughtSevice: ThoughtService) {}
 
   ngOnInit(): void {
-    this.thoughtSevice.list().subscribe((thoughtsList) => {
-      this.thoughtsList = thoughtsList
-    })
+    this.thoughtSevice.list(this.currentPage).subscribe((thoughtsList) => {
+      this.thoughtsList = thoughtsList;
+    });
+  }
+
+  loadMoreThoughts() {
+    this.thoughtSevice.list(++this.currentPage).subscribe((thoughtsList) => {
+      this.thoughtsList.push(...thoughtsList);
+      if (!thoughtsList.length) {
+        this.isThereMoreThoughts = false;
+      }
+    });
   }
 }

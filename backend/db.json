@@ -65,6 +65,12 @@
       "content": "Estudar Angular é devesas interessante, uma vez que é bem parecido com Vue. E tchucuplau",
       "authorship": "DevAngular",
       "template": "modelo2"
+    },
+    {
+      "content": "If you are stuck in some bug, stop coding, get a coffee and relax a little bit. That's all.",
+      "authorship": "the pragmatic programmer",
+      "template": "modelo3",
+      "id": 12
     }
   ]
 }
