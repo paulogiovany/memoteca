@@ -47,6 +47,24 @@
       "authorship": "Any get woke :)",
       "template": "modelo2",
       "id": 8
+    },
+    {
+      "content": "Fooo Baaarrrrr",
+      "authorship": "FooBarrer",
+      "template": "modelo1",
+      "id": 9
+    },
+    {
+      "content": "To be or no to be :D",
+      "authorship": "Dev",
+      "template": "modelo1",
+      "id": 10
+    },
+    {
+      "content": "Estudar Angular é devesas interessante, uma vez que é bem parecido com Vue. E tchucuplau",
+      "authorship": "DevAngular",
+      "template": "modelo2",
+      "id": 11
     }
   ]
 }
