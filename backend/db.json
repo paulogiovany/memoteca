@@ -3,8 +3,8 @@
     {
       "id": 1,
       "content": "There's a new Angular Developer",
-      "authorship": "Paulo.dev",
-      "template": "modelo1"
+      "authorship": "Newbie Angular Developer",
+      "template": "modelo2"
     },
     {
       "id": 2,
@@ -55,16 +55,16 @@
       "id": 9
     },
     {
-      "content": "To be or no to be :D",
+      "id": 10,
+      "content": "Maybe this note should be greater than its card could become of the bigger type. But for this i  need to write more than 100 characteres. blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla ",
       "authorship": "Dev",
-      "template": "modelo1",
-      "id": 10
+      "template": "modelo1"
     },
     {
+      "id": 11,
       "content": "Estudar Angular é devesas interessante, uma vez que é bem parecido com Vue. E tchucuplau",
       "authorship": "DevAngular",
-      "template": "modelo2",
-      "id": 11
+      "template": "modelo2"
     }
   ]
 }

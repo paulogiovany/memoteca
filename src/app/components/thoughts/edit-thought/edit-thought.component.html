@@ -1,6 +1,6 @@
 <section class="container editar-pensamentos ff-inter">
   <header class="header">
-    <h2>Adicione um <br />pensamento novo</h2>
+    <h2>Edite o pensamento</h2>
   </header>
   <form [formGroup]="form">
     <label for="pensamento">Pensamento</label>
@@ -12,6 +12,12 @@
       placeholder="Digite o pensamento"
       formControlName="content"
     />
+    <div
+      class="mensagem_erro"
+      *ngIf="form.get('content')?.touched && !form.get('content')?.valid"
+    >
+      Pensamento é obrigatório!
+    </div>
     <label for="pensamento">Autoria ou fonte</label>
     <input
       type="textarea"
@@ -21,6 +27,24 @@
       placeholder="Digite a autoria ou fonte"
       formControlName="authorship"
     />
+    <div
+      class="mensagem_erro"
+      *ngIf="form.get('authorship')?.touched && form.get('authorship')?.errors?.['required']"
+    >
+      Autoria é obrigatória!
+    </div>
+    <div
+      class="mensagem_erro"
+      *ngIf="form.get('authorship')?.touched && form.get('authorship')?.errors?.['minlength']"
+    >
+      Autoria deve ter no mínimo 3 caracteres!
+    </div>
+    <div
+      class="mensagem_erro"
+      *ngIf="form.get('authorship')?.touched && form.get('authorship')?.errors?.['pattern']"
+    >
+      A autoria não pode ter apenas caracteres brancos!
+    </div>
     <label for="modelo">Selecione o modelo do card:</label>
     <div class="container-radio">
       <div class="radio-modelo">
@@ -97,7 +121,14 @@
       </div>
     </div>
     <div class="acoes">
-      <button (click)="editThought()" class="botao">Salvar</button>
+      <button
+        (click)="editThought()"
+        class="botao"
+        [ngClass]="!form.valid ? 'botao_desabilitado' : 'botao'"
+        [disabled]="false"
+      >
+        Salvar
+      </button>
       <button (click)="cancelEdition()" class="botao">Cancelar</button>
     </div>
   </form>

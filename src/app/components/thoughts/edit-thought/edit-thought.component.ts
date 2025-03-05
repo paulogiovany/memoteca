@@ -2,7 +2,7 @@ import { ThoughtService } from './../thought.service';
 import { Component, OnInit } from '@angular/core';
 import { Thought } from '../thought/thought';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-edit-thought',
@@ -24,17 +24,33 @@ export class EditThoughtComponent implements OnInit {
     this.thoughtService.getById(parseInt(id!)).subscribe((thought) => {
       this.form = this.formBuilder.group({
         id: [thought.id],
-        content: [thought.content],
-        authorship: [thought.authorship],
+        content: [
+          thought.content,
+          Validators.compose([
+            Validators.required,
+            Validators.pattern(/.*\S.*/),
+          ]),
+        ],
+        authorship: [
+          thought.authorship,
+          Validators.compose([
+            Validators.required,
+            Validators.pattern(/.*\S.*/),
+            Validators.minLength(3),
+          ]),
+        ],
         template: [thought.template],
       });
     });
   }
 
   editThought() {
-    this.thoughtService.update(this.form.value).subscribe(() => {
-      this.router.navigate(['/list-thoughts']);
-    });
+    console.log(this.form)
+    if (this.form.valid) {
+      this.thoughtService.update(this.form.value).subscribe(() => {
+        this.router.navigate(['/list-thoughts']);
+      });
+    }
   }
 
   cancelEdition() {
