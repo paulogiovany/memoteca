@@ -35,7 +35,7 @@ export class EditThoughtComponent implements OnInit {
           thought.authorship,
           Validators.compose([
             Validators.required,
-            Validators.pattern(/.*\S.*/),
+            Validators.pattern(/^[\p{Ll}\s]+$/u),
             Validators.minLength(3),
           ]),
         ],

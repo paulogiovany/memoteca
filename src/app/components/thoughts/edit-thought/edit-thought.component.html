@@ -2,7 +2,7 @@
   <header class="header">
     <h2>Edite o pensamento</h2>
   </header>
-  <form [formGroup]="form">
+  <form [formGroup]="form" *ngIf="form">
     <label for="pensamento">Pensamento</label>
     <input
       type="textarea"
@@ -43,7 +43,7 @@
       class="mensagem_erro"
       *ngIf="form.get('authorship')?.touched && form.get('authorship')?.errors?.['pattern']"
     >
-      A autoria não pode ter apenas caracteres brancos!
+      A autoria deve ter apenas caracteres minúsculos!
     </div>
     <label for="modelo">Selecione o modelo do card:</label>
     <div class="container-radio">
@@ -53,7 +53,7 @@
             type="radio"
             id="modelo1"
             value="modelo1"
-            name="modelo-card"
+            name="template"
             formControlName="template"
           />
           <div class="custom-radio">
@@ -76,7 +76,7 @@
             type="radio"
             id="modelo2"
             value="modelo2"
-            name="modelo-card"
+            name="template"
             formControlName="template"
           />
           <div class="custom-radio">
@@ -102,7 +102,7 @@
             type="radio"
             id="modelo3"
             value="modelo3"
-            name="modelo-card"
+            name="template"
             formControlName="template"
           />
           <div class="custom-radio">
@@ -123,9 +123,8 @@
     <div class="acoes">
       <button
         (click)="editThought()"
-        class="botao"
         [ngClass]="!form.valid ? 'botao_desabilitado' : 'botao'"
-        [disabled]="false"
+        [disabled]="!form.valid"
       >
         Salvar
       </button>

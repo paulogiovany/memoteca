@@ -30,6 +30,7 @@ export class CreateThoughtComponent implements OnInit {
         '',
         Validators.compose([
           Validators.required,
+          Validators.pattern(/^[\p{Ll}\s]+$/u),
           Validators.minLength(3)]),
       ],
       template: ['modelo1'],
