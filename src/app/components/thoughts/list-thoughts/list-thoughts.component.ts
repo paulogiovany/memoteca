@@ -15,6 +15,8 @@ export class ListThoughtsComponent implements OnInit {
   isThereMoreThoughts: boolean = true;
   filter: string = '';
   favorites: boolean = false;
+  title: string = 'Meu Mural';
+
   constructor(private thoughtSevice: ThoughtService, private router: Router) {}
 
   ngOnInit(): void {
@@ -55,6 +57,7 @@ export class ListThoughtsComponent implements OnInit {
   }
 
   listFavorites() {
+    this.title = 'Meus favoritos';
     this.isThereMoreThoughts = true;
     this.currentPage = 1;
     this.favorites = true;
