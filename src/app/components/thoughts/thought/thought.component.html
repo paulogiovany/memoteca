@@ -8,7 +8,7 @@
     <b>{{ thought.authorship }}</b>
   </p>
   <div class="acoes">
-    <button class="botao-favorito">
+    <button class="botao-favorito" (click)="toggleFavorite()">
       <img
         src="/assets/images/favorite-{{ getFavoriteState() }}.svg"
         alt="Ícone favorito {{ getFavoriteState() }}"

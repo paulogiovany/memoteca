@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Thought } from './thought';
+import { ThoughtService } from '../thought.service';
 
 @Component({
   selector: 'app-thought',
@@ -15,7 +16,7 @@ export class ThoughtComponent implements OnInit {
     favorite: false,
   };
 
-  constructor() {}
+  constructor(private thoughtService: ThoughtService) {}
 
   ngOnInit(): void {}
 
@@ -25,5 +26,9 @@ export class ThoughtComponent implements OnInit {
 
   getFavoriteState(): string {
     return this.thought.favorite ? 'active' : 'inactive';
+  }
+
+  toggleFavorite(): void {
+    this.thoughtService.toggleFavorite(this.thought).subscribe();
   }
 }
