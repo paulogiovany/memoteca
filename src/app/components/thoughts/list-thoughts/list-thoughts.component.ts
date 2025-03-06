@@ -1,6 +1,6 @@
+import { ThoughtService } from './../thought.service';
 import { Component, OnInit } from '@angular/core';
 import { Thought } from '../thought/thought';
-import { ThoughtService } from '../thought.service';
 
 @Component({
   selector: 'app-list-thoughts',
@@ -12,11 +12,12 @@ export class ListThoughtsComponent implements OnInit {
   currentPage: number = 1;
   isThereMoreThoughts: boolean = true;
   filter: string = '';
+  favorites: boolean = false;
   constructor(private thoughtSevice: ThoughtService) {}
 
   ngOnInit(): void {
     this.thoughtSevice
-      .list(this.currentPage, this.filter)
+      .list(this.currentPage, this.filter, this.favorites)
       .subscribe((thoughtsList) => {
         this.thoughtsList = thoughtsList;
       });
@@ -24,7 +25,7 @@ export class ListThoughtsComponent implements OnInit {
 
   loadMoreThoughts() {
     this.thoughtSevice
-      .list(++this.currentPage, this.filter)
+      .list(++this.currentPage, this.filter, this.favorites)
       .subscribe((thoughtsList) => {
         this.thoughtsList.push(...thoughtsList);
         if (!thoughtsList.length) {
@@ -37,9 +38,20 @@ export class ListThoughtsComponent implements OnInit {
     this.currentPage = 1;
     this.isThereMoreThoughts = true;
     this.thoughtSevice
-      .list(this.currentPage, this.filter)
+      .list(this.currentPage, this.filter, this.favorites)
       .subscribe((thoughtsList) => {
         this.thoughtsList = thoughtsList;
+      });
+  }
+
+  listFavorites() {
+    this.isThereMoreThoughts = true;
+    this.currentPage = 1;
+    this.favorites = true;
+    this.thoughtSevice
+      .list(this.currentPage, this.filter, this.favorites)
+      .subscribe((thoughts: Thought[]) => {
+        this.thoughtsList = thoughts;
       });
   }
 }
