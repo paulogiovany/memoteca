@@ -10,16 +10,16 @@
     {
       "id": 2,
       "content": "Is Angular as bad as Cezar says?",
-      "authorship": "MonoAngular.dev",
+      "authorship": "monoangular",
       "template": "modelo2",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 3,
       "content": "If we would depend of a React developer to survive, would we survive?",
       "authorship": "AntiReactDevs.dev",
       "template": "modelo1",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 4,
@@ -33,7 +33,7 @@
       "content": "Growth begins where comfort ends.",
       "authorship": "ChatGPT",
       "template": "modelo2",
-      "favorite": true
+      "favorite": false
     },
     {
       "content": "This thought has the unique purpose of test if the creation method is working properly.",

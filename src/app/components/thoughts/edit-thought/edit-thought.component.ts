@@ -46,7 +46,6 @@ export class EditThoughtComponent implements OnInit {
   }
 
   editThought() {
-    console.log(this.form)
     if (this.form.valid) {
       this.thoughtService.update(this.form.value).subscribe(() => {
         this.router.navigate(['/list-thoughts']);

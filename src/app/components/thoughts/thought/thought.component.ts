@@ -16,6 +16,8 @@ export class ThoughtComponent implements OnInit {
     favorite: false,
   };
 
+  @Input() favoritesList: Thought[] = [];
+
   constructor(private thoughtService: ThoughtService) {}
 
   ngOnInit(): void {}
@@ -29,6 +31,8 @@ export class ThoughtComponent implements OnInit {
   }
 
   toggleFavorite(): void {
-    this.thoughtService.toggleFavorite(this.thought).subscribe();
+    this.thoughtService.toggleFavorite(this.thought).subscribe(() => {
+      this.favoritesList.splice(this.favoritesList.indexOf(this.thought), 1);
+    });
   }
 }
