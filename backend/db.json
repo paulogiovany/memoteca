@@ -36,13 +36,6 @@
       "favorite": false
     },
     {
-      "content": "This thought has the unique purpose of test if the creation method is working properly.",
-      "authorship": "{{<h6>paulo.dev</h6>}}",
-      "template": "modelo3",
-      "favorite": false,
-      "id": 6
-    },
-    {
       "content": "i18n is the prettiest thing I've ever heard about..",
       "authorship": "i18enison",
       "template": "modelo1",
@@ -55,20 +48,6 @@
       "template": "modelo2",
       "favorite": false,
       "id": 8
-    },
-    {
-      "content": "Fooo Baaarrrrr",
-      "authorship": "FooBarrer",
-      "template": "modelo1",
-      "favorite": false,
-      "id": 9
-    },
-    {
-      "id": 10,
-      "content": "Maybe this note should be greater than its card could become of the bigger type. But for this i  need to write more than 100 characteres. blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla ",
-      "authorship": "Dev",
-      "template": "modelo1",
-      "favorite": false
     },
     {
       "id": 11,
