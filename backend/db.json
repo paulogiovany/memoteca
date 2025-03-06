@@ -4,72 +4,84 @@
       "id": 1,
       "content": "There's a new Angular Developer",
       "authorship": "Newbie Angular Developer",
-      "template": "modelo2"
+      "template": "modelo2",
+      "favorite": true
     },
     {
       "id": 2,
       "content": "Is Angular as bad as Cezar says?",
       "authorship": "MonoAngular.dev",
-      "template": "modelo2"
+      "template": "modelo2",
+      "favorite": false
     },
     {
       "id": 3,
       "content": "If we would depend of a React developer to survive, would we survive?",
       "authorship": "AntiReactDevs.dev",
-      "template": "modelo1"
+      "template": "modelo1",
+      "favorite": false
     },
     {
       "id": 4,
       "content": "A verdadeira sabedoria está em reconhecer o quanto ainda há para aprender.",
       "authorship": "ChatGPT",
-      "template": "modelo1"
+      "template": "modelo1",
+      "favorite": false
     },
     {
       "id": 5,
       "content": "Growth begins where comfort ends.",
       "authorship": "ChatGPT",
-      "template": "modelo2"
+      "template": "modelo2",
+      "favorite": true
     },
     {
       "content": "This thought has the unique purpose of test if the creation method is working properly.",
       "authorship": "{{<h6>paulo.dev</h6>}}",
       "template": "modelo3",
+      "favorite": false,
       "id": 6
     },
     {
       "content": "i18n is the prettiest thing I've ever heard about..",
       "authorship": "i18enison",
       "template": "modelo1",
+      "favorite": false,
       "id": 7
     },
     {
       "content": "There's something as cool as fuck i would like to show you.",
       "authorship": "Any get woke :)",
       "template": "modelo2",
+      "favorite": false,
       "id": 8
     },
     {
       "content": "Fooo Baaarrrrr",
       "authorship": "FooBarrer",
       "template": "modelo1",
+      "favorite": false,
       "id": 9
     },
     {
       "id": 10,
       "content": "Maybe this note should be greater than its card could become of the bigger type. But for this i  need to write more than 100 characteres. blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla blablabla ",
       "authorship": "Dev",
-      "template": "modelo1"
+      "template": "modelo1",
+      "favorite": false
     },
     {
       "id": 11,
       "content": "Estudar Angular é devesas interessante, uma vez que é bem parecido com Vue. E tchucuplau",
       "authorship": "DevAngular",
-      "template": "modelo2"
+      "template": "modelo2",
+      "favorite": false
     },
     {
       "content": "If you are stuck in some bug, stop coding, get a coffee and relax a little bit. That's all.",
       "authorship": "the pragmatic programmer",
       "template": "modelo3",
+      "favorite": false,
       "id": 12
     }
   ]

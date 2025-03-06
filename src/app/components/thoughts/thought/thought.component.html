@@ -1,13 +1,30 @@
-<div class="pensamento {{ thought.template }} ff-roboto-mono" [ngClass]="thoughtLenght()">
+<div
+  class="pensamento {{ thought.template }} ff-roboto-mono"
+  [ngClass]="thoughtLenght()"
+>
   <img src="/assets/images/{{ thought.template }}.png" alt="Aspas coloridas" />
-  <p class="conteudo">{{thought.content}}</p>
-  <p class="autoria"><b>{{thought.authorship}}</b></p>
+  <p class="conteudo">{{ thought.content }}</p>
+  <p class="autoria">
+    <b>{{ thought.authorship }}</b>
+  </p>
   <div class="acoes">
-    <button class="botao-editar" routerLink="/thoughts/edit-thought/{{thought.id}}">
-      <img src="/assets/images/file-pen.svg" alt="Ícone de editar">
+    <button class="botao-favorito">
+      <img
+        src="/assets/images/favorite-{{ getFavoriteState() }}.svg"
+        alt="Ícone favorito {{ getFavoriteState() }}"
+      />
     </button>
-    <button class="botao-excluir" routerLink="/thoughts/delete-thought/{{thought.id}}">
-      <img src="/assets/images/trash-2.svg" alt="Ícone de excluir">
+    <button
+      class="botao-editar"
+      routerLink="/thoughts/edit-thought/{{ thought.id }}"
+    >
+      <img src="/assets/images/file-pen.svg" alt="Ícone de editar" />
+    </button>
+    <button
+      class="botao-excluir"
+      routerLink="/thoughts/delete-thought/{{ thought.id }}"
+    >
+      <img src="/assets/images/trash-2.svg" alt="Ícone de excluir" />
     </button>
   </div>
 </div>

@@ -4,23 +4,26 @@ import { Thought } from './thought';
 @Component({
   selector: 'app-thought',
   templateUrl: './thought.component.html',
-  styleUrls: ['./thought.component.css']
+  styleUrls: ['./thought.component.css'],
 })
 export class ThoughtComponent implements OnInit {
-
   @Input() thought: Thought = {
     id: 0,
-    content: "Content example",
-    authorship: "Author example",
-    template: "modelo3"
-  }
+    content: 'Content example',
+    authorship: 'Author example',
+    template: 'modelo3',
+    favorite: false,
+  };
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   thoughtLenght(): string {
     return this.thought.content.length >= 256 ? 'pensamento-g' : 'pensamento-p';
+  }
+
+  getFavoriteState(): string {
+    return this.thought.favorite ? 'active' : 'inactive';
   }
 }
